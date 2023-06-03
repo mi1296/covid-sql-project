@@ -54,12 +54,12 @@ SET continent = NULL
 WHERE continent = '';
 
 -- BY CONTINENT
--- SELECT continent, MAX(CAST(total_deaths AS UNSIGNED)) AS TotalDeathCount
--- FROM covid_deaths
--- WHERE location='india'
--- WHERE continent IS NULL
--- GROUP BY location
--- ORDER BY TotalDeathCount DESC;
+SELECT continent, MAX(CAST(total_deaths AS UNSIGNED)) AS TotalDeathCount
+FROM covid_deaths
+WHERE location='india'
+WHERE continent IS NULL
+GROUP BY location
+ORDER BY TotalDeathCount DESC;
 
 SELECT location, MAX(CAST(total_deaths AS UNSIGNED)) AS TotalDeathCount
 FROM covid_deaths
